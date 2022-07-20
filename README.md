@@ -25,12 +25,15 @@
 <img width="6%" title="Idea" src="images/logo/Idea.svg">
 <img width="6%" title="Java" src="images/logo/Java.svg">
 <img width="6%" title="Selenide" src="images/logo/Selenide.svg">
+<img width="6%" title="Selenide" src="images/logo/Selenoid.svg">
 <img width="6%" title="Allure Report" src="images/logo/Allure.svg">
+<img width="6%" title="Allure Report" src="images/logo/Allure_TestOps.svg">
 <img width="6%" title="Gradle" src="images/logo/Gradle.svg">
 <img width="6%" title="JUnit5" src="images/logo/Junit5.svg">
 <img width="6%" title="GitHub" src="images/logo/GitHub.svg">
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Browserstack" src="images/logo/browserstack-icon.svg">
+<img width="6%" title="Jenkins" src="images/logo/Telegram.svg">
 </p>
 
 ## :man_cook: Jenkins job
@@ -71,4 +74,7 @@ gradle clean test -DdeviceHost=local
 
 
 ## :video_camera: Видео
+<img src="images/logo/Selenoid.svg" width="25" height="25"  alt="Allure"/></a> Пример запуска теста в Selenoid.
+К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
+
 https://user-images.githubusercontent.com/46088161/180094036-89ee4be0-aea4-4646-819d-c9172a180d48.mp4
