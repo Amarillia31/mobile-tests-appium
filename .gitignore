@@ -11,7 +11,8 @@
 .mtj.tmp/
 
 # Properties files
-*.properties
+src/test/resources/config/browserstack.properties
+src/test/resources/config/local.properties
 
 # Package Files #
 *.jar
@@ -37,7 +38,6 @@ target/
 .classpath
 .project
 .settings/org.eclipse.buildship.core.prefs
-src/test/resources/config
 .vscode
 /gradlew
 /gradlew.bat

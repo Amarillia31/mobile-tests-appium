@@ -6,21 +6,10 @@ import org.aeonbits.owner.Config;
 
 public interface LocalConfig extends Config {
 
-    @Key("appActivity")
     String appActivity();
-
-    @Key("appPackage")
     String appPackage();
-
-    @Key("platformVersion")
     String platformVersion();
-
-    @Key("deviceName")
     String deviceName();
-
-    @Key("platformName")
     String platformName();
-
-    @Key("urlLocal")
     String urlLocal();
 }
