@@ -6,7 +6,9 @@ import org.aeonbits.owner.Config;
 
 public interface BrowserstackConfig extends Config {
 
+    @Key("user")
     String browserstackUser();
+    @Key("key")
     String browserstackKey();
     String app();
     String device();
