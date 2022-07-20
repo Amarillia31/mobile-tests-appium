@@ -71,6 +71,4 @@ gradle clean test -DdeviceHost=local
 
 
 ## :video_camera: Видео
-<p align="center">
-<img src="/images/screen/7d4be9ebd8c1f29a8a90efcb29c41ed5381734c5.gif" alt="video"/></a>
-</p>
+https://user-images.githubusercontent.com/46088161/180094036-89ee4be0-aea4-4646-819d-c9172a180d48.mp4
