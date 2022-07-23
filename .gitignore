@@ -12,7 +12,6 @@
 
 # Properties files
 src/test/resources/config/browserstack.properties
-src/test/resources/config/local.properties
 
 # Package Files #
 *.jar
