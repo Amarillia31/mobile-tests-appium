@@ -17,4 +17,5 @@ public interface BrowserstackConfig extends Config {
     String build();
     String name();
     String urlBrowserstack();
+    String appPath();
 }

@@ -12,4 +12,7 @@ public interface LocalConfig extends Config {
     String deviceName();
     String platformName();
     String urlLocal();
+    String appUrl();
+    String appPath();
+
 }

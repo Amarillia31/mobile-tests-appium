@@ -34,6 +34,7 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 <img width="6%" title="Browserstack" src="images/logo/browserstack-icon.svg">
 <img width="6%" title="Jenkins" src="images/logo/Telegram.svg">
+<img width="6%" title="Jenkins" src="images/logo/Appium.svg">
 </p>
 
 ## :man_cook: Jenkins job
