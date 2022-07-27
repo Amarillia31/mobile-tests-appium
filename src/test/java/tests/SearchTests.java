@@ -20,12 +20,11 @@ import static io.qameta.allure.Allure.step;
 public class SearchTests extends TestBase {
 
     @Test
-    @Tags({@Tag("Search"),@Tag("Mobile")})
+    @Tags({@Tag("Search"), @Tag("Mobile")})
     @DisplayName("Check search is finding item")
     void searchTest() {
-        step("Skip onboarding screen", () -> {
-            back();
-        });
+        step("Skip onboarding screen", () ->
+                back());
 
         step("Type on search field", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container"))
@@ -34,19 +33,17 @@ public class SearchTests extends TestBase {
                     .sendKeys("BrowserStack");
         });
 
-        step("Verify content found", () -> {
-            $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
-                    .shouldHave(CollectionCondition.sizeGreaterThan(0));
-        });
+        step("Verify content found", () ->
+                $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
+                        .shouldHave(CollectionCondition.sizeGreaterThan(0)));
     }
 
     @Test
-    @Tags({@Tag("Search"),@Tag("Mobile")})
+    @Tags({@Tag("Search"), @Tag("Mobile")})
     @DisplayName("Check search is finding correct item")
     void searchTestMozartCheckByText() {
-        step("Skip onboarding screen", () -> {
-            back();
-        });
+        step("Skip onboarding screen", () ->
+                back());
 
         step("Type on search field", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container"))
@@ -55,14 +52,13 @@ public class SearchTests extends TestBase {
                     .sendKeys("Mozart");
         });
 
-        step("Verify content found", () -> {
+        step("Verify content found", () ->
                 $$(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title"))
-                        .shouldHave(CollectionCondition.containExactTextsCaseSensitive("Wolfgang Amadeus Mozart"));
-        });
+                        .shouldHave(CollectionCondition.containExactTextsCaseSensitive("Wolfgang Amadeus Mozart")));
     }
 
     @Test
-    @Tags({@Tag("Other"),@Tag("Mobile")})
+    @Tags({@Tag("Other"), @Tag("Mobile")})
     @DisplayName("Check opening screen onboarding pages")
     void openingScreenTest() {
         step("Check first page", () -> {
@@ -87,38 +83,33 @@ public class SearchTests extends TestBase {
                     .click();
         });
 
-        step("Check fourth page", () -> {
-            $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView")).
-                    shouldHave(text("Send anonymous data"));
-        });
+        step("Check fourth page", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/primaryTextView")).
+                        shouldHave(text("Send anonymous data")));
     }
 
     @Test
-    @Tags({@Tag("MainPage"),@Tag("Mobile")})
+    @Tags({@Tag("MainPage"), @Tag("Mobile")})
     @DisplayName("Verify main page opened")
     void checkMainPageOpened() {
-        step("Skip onboarding screen", () -> {
-            back();
-        });
+        step("Skip onboarding screen", () ->
+                back());
 
-        step("Verify content found", () -> {
-            $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_text"))
-                    .shouldHave(text("Customize your Explore feed "));
-        });
+        step("Verify content found", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/view_announcement_text"))
+                        .shouldHave(text("Customize your Explore feed ")));
 
-        step("check main page picture is available",() -> {
-            $(AppiumBy.id("org.wikipedia.alpha:id/main_toolbar_wordmark"))
-                    .shouldBe(visible);
-        });
+        step("check main page picture is available", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/main_toolbar_wordmark"))
+                        .shouldBe(visible));
     }
 
     @Test
-    @Tags({@Tag("Bookmarks"),@Tag("Mobile")})
+    @Tags({@Tag("Bookmarks"), @Tag("Mobile")})
     @DisplayName("Check article can be added to bookmarks")
     void saveItem() {
-        step("Skip onboarding screen", () -> {
-            back();
-        });
+        step("Skip onboarding screen", () ->
+                back());
 
         step("Type on search field and open correct wiki page ", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/search_container")).click();
@@ -127,18 +118,16 @@ public class SearchTests extends TestBase {
             $(AppiumBy.id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
 
-        step("Add article into bookmarks", () -> {
-            $(AppiumBy.id("org.wikipedia.alpha:id/page_save")).click();
-        });
+        step("Add article into bookmarks", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/page_save")).click());
 
         step("Return to the main page", () -> {
             $(AppiumBy.className("android.widget.ImageButton")).click();
             $(AppiumBy.className("android.widget.ImageButton")).click();
         });
 
-        step("Open bookmarks page", () -> {
-            $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click();
-        });
+        step("Open bookmarks page", () ->
+                $(AppiumBy.id("org.wikipedia.alpha:id/nav_tab_reading_lists")).click());
 
         step("Check article was added", () -> {
             $(AppiumBy.id("org.wikipedia.alpha:id/item_title")).click();
@@ -146,5 +135,4 @@ public class SearchTests extends TestBase {
                     .shouldHave(text("Wolfgang Amadeus Mozart"));
         });
     }
-
 }

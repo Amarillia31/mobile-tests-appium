@@ -19,7 +19,7 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase {
 
-    static String deviceHost = System.getProperty("deviceHost","local");
+    static String deviceHost = System.getProperty("deviceHost", "local");
 
     @BeforeAll
     public static void setup() {
@@ -29,7 +29,6 @@ public class TestBase {
             Configuration.browser = BrowserstackMobileDriver.class.getName();
         }
         Configuration.browserSize = null;
-        System.out.println(deviceHost);
     }
 
     @BeforeEach
@@ -51,6 +50,5 @@ public class TestBase {
         if (Objects.equals(deviceHost, "browserstack")) {
             Attach.video(sessionId);
         }
-
     }
 }
